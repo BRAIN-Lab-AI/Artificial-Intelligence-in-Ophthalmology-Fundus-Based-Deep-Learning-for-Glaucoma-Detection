@@ -2,21 +2,57 @@
 
 ## Project Metadata
 ### Authors
-- **Team:** Name1, Namw2
+- **Team:** Zeina Moammer Alabido, g202423020
 - **Supervisor Name:** Dr. Muzammil Behzad
-- **Affiliations:** SABIC, ARAMCO and KFUPM (write your institution name, and/or KFUPM)
+- **Affiliations:** KFUPM
 
 ## Introduction
-Write 1-2 technical paragraphs (feel free to add images if you would like).
+Glaucoma is one of the well-known Retinal diseases that happen due to factors that 
+lead to irreversible sight loss. It occurs when the fluids of the eye do not drain correctly, 
+consequently, that leads to eyeball pressure. There is an optic nerve connected in 
+between their eye and the brain, which will be affected by this pressure. This kind of 
+disease is not treated and tackled, the vessels within the eye tissue would be burst. 
+Approximately 3.6 million people might be affected with blindness because of 
+glaucoma. In addition, research estimated that about 76 million of humans they think 
+they might have glaucoma, another 94.4 million they are more expected to be 
+affected by glaucoma in 2023, and what goes the problem more seriously is that 50% 
+of the people they have glaucoma they do not know, because they ignore the 
+symptoms they might feel it is normal[2]. 
+There are different types of glaucoma: 
+1- Primary open-angle Glaucoma: In this type, the channels that work on fluids 
+draining are blocked. It might send fewer warnings about having glaucoma, 
+but it is better if it has been detected early [2]. 
+2- Acute angle-closure Glaucoma: this type causes symptoms that need urgent 
+attention, such as a medicine to lower the eye pressure sometimes used before 
+the surgery [2]. 
+3- Secondary Glaucoma: this type of Glaucoma might be caused because of an 
+injury, taking certain medicine, or an illness, for example, steroids [2]. 
+Artificial and Machine learning can have an important favor in the early detection of 
+Glaucoma, whether in its early ages, or even later. With AI, once we can detect the 
+Glaucoma, the best and appropriate treatment will be given to the patient who has 
+those diseases. 
 
 ## Problem Statement
-Write 1-2 technical paragraphs (feel free to add images if you would like).
+The problem of Glaucoma is a significant medical health problem that should be 
+addressed carefully. Nowadays, the Artificial Intelligence world has become 
+demandable in the field of medicine, since it assists the doctors in the early discovery 
+of a serious medical problem. However, the data becomes an obstacle in this field, 
+such as it is not available publicly, it is limited to specific region, etc. Moreover, patients 
+sometimes might not accept the idea of having their image has been used for 
+medical analysis to be used for research purposes, so the result is, small, and simple 
+dataset. Also, deep learning models require high dimensional data, because the DL 
+models are too complex, and it introduces non-linearity, so it requires more complex 
+datasets. 
 
 ## Application Area and Project Domain
-Write 1-2 technical paragraphs (feel free to add images if you would like).
+The dataset has been used in this study it has been collected from Kim's Eye Hospital, 
+Yeongdeungpo-gu, Seoul, South Korea. Unfortunately, the data set availability is 
+extremely limited, despite some of them are publicly available to be used, but very 
+few ones. 
 
 ## What is the paper trying to do, and what are you planning to do?
-Write 1-2 technical paragraphs (feel free to add images if you would like).
+To develop a model that able to classify the Glaucoma Retinal Diseases using 
+Fundus Images and leverage the beauty of Multiclassification. In addition, Generalize the results of the model to other datasets (if available). Moreover, If the model successes, we should generalize that the model will work well on other retinal disease classifications. 
 
 
 # THE FOLLOWING IS SUPPOSED TO BE DONE LATER
