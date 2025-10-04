@@ -82,20 +82,18 @@ Fundus Images and leverage the beauty of Multiclassification. In addition, Gener
 - **Conditional Generation:** The process where outputs are generated based on auxiliary inputs, such as textual descriptions.
 
 ### Problem Statements
-- **Problem 1:** Dataset Limitation: Most of the papers found have been using private datasets, which are not publicly available.
+- **Problem 1:** Dataset Dependency: Most of the papers found have been using private datasets, which are not publicly available.
 - **Problem 2:** It is limited to a specific scope. In other words, most of the papers have collected datasets from their own region. Consequently, the models generalize to all types of images in different countries.
 - **Problem 3:** Most of the paper focuses on classification, rather than trying more advanced techniques such as segmentation, object detection, or even image captioning.
 - **Problem 4:** Universal Model: Do these models work to classify or detect other retinal diseases? This is one of the limitations in the previous papers.
 
 ### Loopholes or Research Areas
-- **Evaluation Metrics:** Lack of robust metrics to effectively assess the quality of generated images.
-- **Output Consistency:** Inconsistencies in output quality when scaling the model to higher resolutions.
-- **Computational Resources:** Training requires significant GPU compute resources, which may not be readily accessible.
+- **Simple Deep Learning Models:** The topic of Glaucoma classification focused on classifying into Glaucoma or Non-Glaucoma, which means applying only binary classification.
+- **High Quality Computational Resources:** Training requires significant GPU compute resources and strong machines, since the neural networks require a complex and large datasets to train and test the models, as a result, strong GPUs must be used.
 
 ### Problem vs. Ideation: Proposed 3 Ideas to Solve the Problems
-1. **Optimized Architecture:** Redesign the model architecture to improve efficiency and balance image quality with faster inference.
-2. **Advanced Loss Functions:** Integrate novel loss functions (e.g., perceptual loss) to better capture artistic nuances and structural details.
-3. **Enhanced Data Augmentation:** Implement sophisticated data augmentation strategies to improve the model’s robustness and reduce overfitting.
+1. **Optimized Architecture:** -Hypothesis: This research will build a strong and robust deep learning model to classify glaucoma cases.
+3. **Enhanced Data Augmentation:** Apply the needed steps for data preparation, processing, and augmentation to prepare the data for model training and testing.
 
 ### Proposed Solution: Code-Based Implementation
 This repository provides an implementation of the enhanced stable diffusion model using PyTorch. The solution includes:
