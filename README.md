@@ -62,7 +62,7 @@ Fundus Images and leverage the beauty of Multiclassification. In addition, Gener
 - **Report:** [Project Report](/report.pdf)
 
 ### Reference Paper
-- [High-Resolution Image Synthesis with Latent Diffusion Models](https://arxiv.org/abs/2112.10752)
+- [A foundation model for generalizable disease detection from retinal images](https://www.nature.com/articles/s41586-023-06555-x)
 
 ### Reference Dataset
 - [Machine learn for Glaucoma Dataset](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/1YRRAC)
@@ -82,9 +82,10 @@ Fundus Images and leverage the beauty of Multiclassification. In addition, Gener
 - **Conditional Generation:** The process where outputs are generated based on auxiliary inputs, such as textual descriptions.
 
 ### Problem Statements
-- **Problem 1:** Achieving high-resolution and detailed images using conventional diffusion models remains challenging.
-- **Problem 2:** Existing models suffer from slow inference times during the image generation process.
-- **Problem 3:** There is limited capability in performing style transfer and generating diverse artistic variations.
+- **Problem 1:** Dataset Limitation: Most of the papers found have been using private datasets, which are not publicly available.
+- **Problem 2:** It is limited to a specific scope. In other words, most of the papers have collected datasets from their own region. Consequently, the models generalize to all types of images in different countries.
+- **Problem 3:** Most of the paper focuses on classification, rather than trying more advanced techniques such as segmentation, object detection, or even image captioning.
+- **Problem 4:** Universal Model: Do these models work to classify or detect other retinal diseases? This is one of the limitations in the previous papers.
 
 ### Loopholes or Research Areas
 - **Evaluation Metrics:** Lack of robust metrics to effectively assess the quality of generated images.
