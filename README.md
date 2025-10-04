@@ -65,8 +65,7 @@ Fundus Images and leverage the beauty of Multiclassification. In addition, Gener
 - [High-Resolution Image Synthesis with Latent Diffusion Models](https://arxiv.org/abs/2112.10752)
 
 ### Reference Dataset
-- [LAION-5B Dataset](https://laion.ai/blog/laion-5b/)
-
+- [Machine learn for Glaucoma Dataset](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/1YRRAC)
 
 ## Project Technicalities
 
