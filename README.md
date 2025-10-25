@@ -126,8 +126,8 @@ Several Data Augmentation techniques have been applied to increase the number of
 
 1. **Clone the Repository:**
     ```bash
-    git clone https://github.com/yourusername/enhanced-stable-diffusion.git
-    cd enhanced-stable-diffusion
+    git clone https://github.com/BRAIN-Lab-AI/Artificial-Intelligence-in-Ophthalmology-Fundus-Based-Deep-Learning-for-Glaucoma-Detection.git
+    cd Artificial-Intelligence-in-Ophthalmology-Fundus-Based-Deep-Learning-for-Glaucoma-Detection
     ```
 
 2. **Set Up the Environment:**
