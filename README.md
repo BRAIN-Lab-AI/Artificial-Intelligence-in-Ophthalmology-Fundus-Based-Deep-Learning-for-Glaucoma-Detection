@@ -104,20 +104,23 @@ This repository provides an implementation of the enhanced multi-classification 
 - **`inference.py`**: Script for generating images using the trained model.
 
 ## Model Workflow
-The workflow of the Enhanced Stable Diffusion model is designed to translate textual descriptions into high-quality artistic images through a multi-step diffusion process:
+The workflow of the Multi-classification model of Glaucoma Disease is designed to classify the images and determine the type of Glaucoma:
 
 1. **Input:**
-   - **Text Prompt:** The model takes a text prompt (e.g., "A surreal landscape with mountains and rivers") as the primary input.
-   - **Tokenization:** The text prompt is tokenized and processed through a text encoder (such as a CLIP model) to obtain meaningful embeddings.
-   - **Latent Noise:** A random latent noise vector is generated to initialize the diffusion process, which is then conditioned on the text embeddings.
+The input is fundus images dataset that contains 1544 images, distributed between Normal, Early Glaucoma, and Advanced Glaucoma cases. The distribution of images between classes is not balanced.
 
-2. **Diffusion Process:**
-   - **Iterative Refinement:** The conditioned latent vector is fed into a modified UNet architecture. The model iteratively refines this vector by reversing a diffusion process, gradually reducing noise while preserving the text-conditioned features.
-   - **Intermediate States:** At each step, intermediate latent representations are produced that increasingly capture the structure and details dictated by the text prompt.
+2. **Data Augemnation:**
+Several Data Augmentation techniques have been applied to increase the number of images, and trying to balance between their distribution on classes.
 
-3. **Output:**
-   - **Decoding:** The final refined latent representation is passed through a decoder (often part of a Variational Autoencoder setup) to generate the final image.
-   - **Generated Image:** The output is a synthesized image that visually represents the input text prompt, complete with artistic style and detail.
+3. **Models Selection and Architecture:**
+- **Deep Neural Networks Applied:** Custom-CNN and MobileNetV2 architectures have been used to test their capabilities in Glaucoma classification.
+- **Activation Functions:** ReLU Activation function has been used within layers, and SoftMax in the last layer for the prediction of multiple classes.
+- **Optimization:** Using Adam Optimizer for weights updates, with mini-batch normalization.
+- **Loss Function:** Use the categorical Cross-Entropy Loss Function to calculate the train and test loss.
+- **Evaluation Metric:** Use the accuracy to calculate the total accuracy of each model for evaluating the performance.
+
+4. **Output:**
+- The models should be able to predict the fundus images as Normal, Early Glaucoma, and Advanced Glaucoma.
 
 ## How to Run the Code
 
@@ -148,6 +151,4 @@ The workflow of the Enhanced Stable Diffusion model is designed to translate tex
     ```
 
 ## Acknowledgments
-- **Open-Source Communities:** Thanks to the contributors of PyTorch, Hugging Face, and other libraries for their amazing work.
-- **Individuals:** Special thanks to bla, bla, bla for the amazing team effort, invaluable guidance and support throughout this project.
-- **Resource Providers:** Gratitude to ABC-organization for providing the computational resources necessary for this project.
+Thanks to Dr. Muzammil for supervising this work.
