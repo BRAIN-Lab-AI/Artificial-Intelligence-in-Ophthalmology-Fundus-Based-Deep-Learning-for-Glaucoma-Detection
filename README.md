@@ -70,16 +70,8 @@ Fundus Images and leverage the beauty of Multiclassification. In addition, Gener
 ## Project Technicalities
 
 ### Terminologies
-- **Diffusion Model:** A generative model that progressively transforms random noise into coherent data.
-- **Latent Space:** A compressed, abstract representation of data where complex features are captured.
-- **UNet Architecture:** A neural network with an encoder-decoder structure featuring skip connections for better feature preservation.
-- **Text Encoder:** A model that converts text into numerical embeddings for downstream tasks.
-- **Perceptual Loss:** A loss function that measures high-level differences between images, emphasizing perceptual similarity.
-- **Tokenization:** The process of breaking down text into smaller units (tokens) for processing.
-- **Noise Vector:** A randomly generated vector used to initialize the diffusion process in generative models.
-- **Decoder:** A network component that transforms latent representations back into image space.
-- **Iterative Refinement:** The process of gradually improving the quality of generated data through multiple steps.
-- **Conditional Generation:** The process where outputs are generated based on auxiliary inputs, such as textual descriptions.
+- **Convolutional Neural Networks** Convolutional Neural Networks (CNNs) is an enhanced version of Artificial Neural Networks (ANNs), it has an automatic feature extraction technique from grid matrix dataset, such as images. CNNs are used mostly in Computer Vision Applications. CNNs are consist of input layer, pooling layer, and fully connected dense layer, ended with an output layer to give the predicted label. What makes CNNs challenging is that it is requires a lot of resources for training the model, which is computationally expensive, and it is prone to overfit if the dataset is not big enough, which requires large amount of data.
+- **MobileNetV2 Architecture:** MobileNetV2 is a pretrained model, and a powerful CNN architecture has been established for light-weight employment such as mobile devices, or embedded vision applications. What makes MobileNetV2 interesting is that it introduces the concept of inverted residual blocks, and bottlenecks, which results in high accuracy. Also, it uses ReLU6 [10], which is an activation function that clips the output at 6, preventing numerical instability and making the model more suitable. 
 
 ### Problem Statements
 - **Problem 1:** Dataset Dependency: Most of the papers found have been using private datasets, which are not publicly available.
@@ -96,11 +88,13 @@ Fundus Images and leverage the beauty of Multiclassification. In addition, Gener
 3. **Enhanced Data Augmentation:** Apply the needed steps for data preparation, processing, and augmentation to prepare the data for model training and testing.
 
 ### Proposed Solution: Code-Based Implementation
-This repository provides an implementation of the enhanced stable diffusion model using PyTorch. The solution includes:
+This repository provides an implementation of the enhanced multi-classification glaucoma detection using tensorflow.keras library. The solution includes:
 
-- **Modified UNet Architecture:** Incorporates residual connections and efficient convolutional blocks.
-- **Novel Loss Functions:** Combines Mean Squared Error (MSE) with perceptual loss to enhance feature learning.
-- **Optimized Training Loop:** Reduces computational overhead while maintaining performance.
+- **Customized-CNN Model:** The proposed CNN used for this project is as follows: Conv2D + ReLU: it consists of 32 filters, and the size of each filter is 3×3, over the input image of size 224×224×3. The output of this layer is going through ReLU activation function to introduce non-linearity and scale the data. Next, followed by Batch Normalization, which normalize the activations within each batch, by calculating the meaning and the variance of data, and then normalize. Batch normalization followed by Max Pooling2D, which works on reducing the dimensionality by reducing the spatial size of feature map. In this case, the Max Pooling applied with the size (2,2). The next layer is another Conv2D + ReLU with 64 filters, each 3×3, which will start learning more hidden patterns, and more complex features, followed by Batch Normalization and Max Pooling2D. Next is Conv2D + ReLU with 128 filters of size 3×3, start to go deep inside the network and reach higher level of learning, followed by Batch Normalization, and Max Pooling2D. These 3 Conv2D layers followed by Flattening layer, which converts the 3D feature map to 1D vector, preparing them for the next layer, which is the Dense Layer. The Dense Layer consists of 256 perceptron with ReLU activation, to learn non-linear combinations. After that, Dropout with 0.4 has been applied to avoid overfitting, followed by Batch Normalization. The Last layer, which gives the prediction of multi-classification using SoftMax.
+- **Custom MobileNetV2 Architecture:** This is a CNN model from TensorFlow Kera Applications. Basically, the weights of “ImageNet” dataset have been loaded, the top fully connected layers of MobileNetV2 have been freeze, because we will build our own. We have used the feature extractor of mobileNetV2 with the custom layers that have been added. The base of MobileNetV2 is followed by a batch normalization, with a global average pooling2D. This is followed by a dense layer that has a 128 + ReLU, with a dropout equals to 0.3. The last layer is a dense layer to produce the output using SoftMax function. 
+- **ReLU Activation Function** Using ReLU Activation function to introduce non-linearity between layers of architecture, for more efficient performance.
+- **Adam Optimizer:** is an optimization technique used to adjust the learning rate during the training, it combines between the advantages of Root Mean Square Propagation (RMSProp), and the momentum.
+- **Categorical Cross-Entropy Loss Function:** categorical cross entropy loss function is used to calculate the loss by the models they are classifying, and it is used when we have more than two classes to classify (multi-classification problems). As an evaluation Metrex for the quality of the models, Categorical Cross Entrop Loss [18]has been used to assess how neural networks performs good on data.
 
 ### Key Components
 - **`model.py`**: Contains the modified UNet architecture and other model components.
