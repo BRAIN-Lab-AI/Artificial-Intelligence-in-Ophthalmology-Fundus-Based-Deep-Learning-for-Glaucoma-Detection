@@ -135,9 +135,11 @@ Several Data Augmentation techniques have been applied to increase the number of
     Create a virtual environment and install the required dependencies.
     ```bash
     python3 -m venv venv
-    source venv/bin/activate  # On Windows use: venv\Scripts\activate
-    pip install -r requirements.txt
+    source venv\Scripts\activate
+    pip install -r C:\Users\zaina\Downloads\requirements.txt
     ```
+
+**The uploaded Jupyter file is already has the training and testing of the models along with the ouputs.**
 
 3. **Train the Model:**
     Configure the training parameters in the provided configuration file and run:
