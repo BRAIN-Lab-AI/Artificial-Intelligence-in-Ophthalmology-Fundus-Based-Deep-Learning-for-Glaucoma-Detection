@@ -62,6 +62,7 @@ Fundus Images and leverage the beauty of Multiclassification. In addition, Gener
 - **Report:** [Project Report](https://kfupmedusa-my.sharepoint.com/:b:/g/personal/g202423020_kfupm_edu_sa/ERqh-6HRLLxPnyqalQ8f7MABlbr41nnpmLB627r1UITs5g?e=wV0h8L)
 - **Code Jupyter Notebook:** [ProjectCodeProject](https://colab.research.google.com/drive/1ELQVfGp5nRm8ZSHVT_nwCSQP4id604wV?usp=sharing)
 - **Dataset used:**[Dataset of Glaucoma Images](https://drive.google.com/drive/folders/1j4a4TRVApPWIAJUO_UzZrP8IK8Haoepq?usp=sharing)
+- **Editable Latex File:** [Latex Project](https://www.overleaf.com/4173158817xnkvkhpdgrzv#9cf3f6)
 
 ### Reference Paper
 - [A foundation model for generalizable disease detection from retinal images](https://www.nature.com/articles/s41586-023-06555-x)
