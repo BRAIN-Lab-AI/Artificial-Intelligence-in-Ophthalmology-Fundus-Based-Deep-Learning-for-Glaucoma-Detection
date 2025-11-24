@@ -55,7 +55,7 @@ To develop a model that able to classify the Glaucoma Retinal Diseases using
 Fundus Images and leverage the beauty of Multiclassification. In addition, Generalize the results of the model to other datasets (if available). Moreover, If the model successes, we should generalize that the model will work well on other retinal disease classifications. 
 
 
-# THE FOLLOWING IS SUPPOSED TO BE DONE LATER
+
 
 ### Project Documents
 - **Presentation:** [Project Presentation](https://kfupmedusa-my.sharepoint.com/:p:/g/personal/g202423020_kfupm_edu_sa/IQCzyxW9uM4dQ5BtP8O6w9s3AXyPnLgXNDNIv7lEIleggVo?e=gyOnJq)
